@@ -27,7 +27,6 @@ export default {
   },
   methods: {
     sendMessage() {
-      console.log(this.message);
       this.$emit("sendMessage", this.message);
       this.message = "";
       this.rows = 1;
@@ -72,7 +71,6 @@ export default {
       if (actualRows != newRows) {
         this.rows = newRows;
       }
-      console.log("rows", newRows, "cols", cols);
     },
     getCols(elem) {
       let cols = 10;
@@ -113,7 +111,6 @@ export default {
       return elem.scrollHeight > elem.offsetHeight;
     },
     recalcTextAreaWidth(elem) {
-      console.log("recalcCharWidth");
       let fontSize = parseFloat(
         window.getComputedStyle(elem, null).getPropertyValue("font-size")
       );
